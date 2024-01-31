@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ContactForm from './components/Contact/ContactForm';
+import TemplateList from './components/Templates/TemplateList';
+import CampaignList from './components/Campaigns/CampaignList';
+import Login from './components/Auth/Login/Login';
+import Register from './components/Auth/Register/Register';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/contact" component={ContactForm} />
+          <Route path="/templates" component={TemplateList} />
+          <Route path="/campaigns" component={CampaignList} />
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
