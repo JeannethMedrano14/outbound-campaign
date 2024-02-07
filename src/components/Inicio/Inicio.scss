@@ -1,0 +1,69 @@
+.inicio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cuadroContacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 53vh;
+  border-radius: 10px;
+  background-color: #92adcc3d;
+  margin: 10em 0px 0px 27px;
+}
+
+.Contactos{
+  border: 1px solid;
+  font-size: 26px;
+}
+
+.cuadroCampaing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 53vh;
+  border-radius: 10px;
+  background-color: #1abdfe27;
+  margin: 10em 0px 0px 0px;
+}
+
+.cuadroTemplate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 53vh;
+  border-radius: 10px;
+  background-color: #ee760d31;
+  margin: 10em 27px 0px 0px;
+}
+
+.cuadro a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconContact {
+  font-size: 15rem;
+  color: #92ADCC;
+}
+
+.iconCampaing {
+  font-size: 15rem;
+  color: #1ABCFE;
+}
+
+.iconTemplate {
+  font-size: 15rem;
+  color: orange;
+}
+
+.texto {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
