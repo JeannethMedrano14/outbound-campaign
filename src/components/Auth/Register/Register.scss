@@ -1,0 +1,134 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e1e1;
+  height: 100vh;
+  border-radius: 15px;
+}
+
+.register-left {
+  background-color: white;
+  padding: 40px;
+  margin-right: 60px;
+  max-width: 700px;
+  text-align: left;  margin-left: 250px;
+  border-radius: 15px;
+  height: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.register-right {
+  width: 50%;
+}
+
+.center-logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 300px;
+  margin-bottom: 40px;
+}
+
+.tipo-doc {
+  font-weight: bold;
+  color: #524f4f;
+  font-size: 20px;
+}
+
+.registration-image {
+  width: 45%;
+  border-radius: 20px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
+  label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #524f4f;
+    
+  }
+  input {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 90%;
+  }
+}
+
+select {
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #524f4f;
+
+  &:focus {
+    outline: none;
+    border-color: #4461F2;
+    box-shadow: 0 0 5px rgba(68, 97, 242, 0.7);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  display: inline-block; 
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #4461F2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: darkpurple;
+}
+
+p {
+  font-size: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #524f4f;
+  text-align: center;
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.check input {
+  margin-right: 10px;
+}
+
+.check p {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 10px;
+  color: #524f4f;
+}
