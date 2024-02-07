@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import './Register.scss';
-import logo from '../../../assets/images/logo.png';
-import phoneimage from '../../../assets/images/phone.png';
+import React, { useState } from "react";
+import "./Register.scss";
+import logo from "../../../assets/images/logo.png";
+import phoneimage from "../../../assets/images/phone.png";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    documentType: '',
-    username: '',
-    password: '',
-    confirmPassword: '',
+    documentType: "",
+    username: "",
+    password: "",
+    confirmPassword: "",
     agreeTerms: false,
   });
 
@@ -16,7 +16,7 @@ const Register = () => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -29,80 +29,100 @@ const Register = () => {
   return (
     <div className="register-container">
       <div className="register-left">
-        <img src={logo} alt="Logo" className="logo" />
-        <form onSubmit={handleSubmit}>
+<div className="center-logo">
+<img src={logo} alt="Logo" className="logo" />
+
+  </div>        
+  <form onSubmit={handleSubmit}>
           {/* Tipo de documento */}
           <div>
-            <label>Tipo de documento </label>
+            <label className="tipo-doc">Tipo de documento </label>
             <select
               name="documentType"
               value={formData.documentType}
               onChange={handleChange}
+              style={{ fontSize: "16px", padding: "8px" }}
             >
-              {/* Opciones del tipo de documento */}
+              <option value="cc">Cédula de ciudadanía</option>
+              <option value="nit">NIT</option>
+              <option value="ce">Cédula de extranjería</option>
+
             </select>
           </div>
 
-          {/* Nombre de usuario */}
-          <div>
-            <label>Nombre de usuario </label>
-            <input
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={handleChange}
-            />
+          <div className="fields">
+            {/* Número de documento */}
+            <div>
+              <label>Número de documento </label>
+              <input
+                type="text"
+                name="numerodocumento"
+                value={formData.numerodocumento}
+                onChange={handleChange}
+                placeholder="Número de documento"
+              />
+            </div>
+
+            {/* Nombre de usuario */}
+            <div>
+              <label>Nombre de usuario </label>
+              <input
+                type="text"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                placeholder="Nombre de usuario"
+              />
+            </div>
+
+            {/* Contraseña */}
+            <div>
+              <label>Contraseña </label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Contraseña"
+              />
+            </div>
+
+            {/* Repita la contraseña */}
+            <div>
+              <label>Repita contraseña </label>
+              <input
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                placeholder="Repita contraseña"
+              />
+            </div>
           </div>
 
-          {/* Contraseña */}
-          <div>
-            <label>Contraseña </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-            />
-          </div>
-
-          {/* Repita la contraseña */}
-          <div>
-            <label>Repita la contraseña </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-            />
-          </div>
-
-          {/* Checkbox de acuerdo con las políticas */}
-          <div>
+          <div className="check">
             <input
               type="checkbox"
               name="agreeTerms"
               checked={formData.agreeTerms}
               onChange={handleChange}
             />
-            <label>He leído y estoy de acuerdo con la política de privacidad y protección de datos personales de SmartSoft Solutions SAS.</label>
+            <p>
+              He leído y estoy de acuerdo con la política de privacidad y protección de datos personales de SmartSoft Solutions SAS.
+            </p>
           </div>
 
-          {/* Texto sobre el uso de datos personales */}
           <p>
             Tus datos personales se utilizarán para mejorar tu experiencia en
-            esta web, gestionar el acceso a tu cuenta, darte un adecuado
-            soporte y otros propósitos descritos en nuestra política de
-            privacidad.
+            esta web, gestionar el acceso a tu cuenta, darte un adecuado soporte
+            y otros propósitos descritos en nuestra política de privacidad.
           </p>
 
-          {/* Botón de registro */}
           <button type="submit">Realizar registro</button>
         </form>
       </div>
       <div className="register-right">
-        {/* Imagen a la derecha */}
         <img src={phoneimage} alt="Imagen" className="registration-image" />
-
       </div>
     </div>
   );
