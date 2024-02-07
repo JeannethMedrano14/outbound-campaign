@@ -1,8 +1,9 @@
 import React from 'react';
+import './Campaigns.scss';
 
 function Campaigns() {
   return (
-    <div>
+    <div className="campaigns-container">
       <h1>Campañas</h1>
     </div>
   );

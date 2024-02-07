@@ -1,42 +1,19 @@
 import React from 'react';
+import './Contacts.scss';
 
-const TableData = ({ data }) => {
+function Contacts() {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Edad</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.nombre}</td>
-            <td>{item.apellido}</td>
-            <td>{item.edad}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-};
-
-const Contacts = () => {
-  const data = [
-    { nombre: 'Juan', apellido: 'Pérez', edad: 25 },
-    { nombre: 'María', apellido: 'García', edad: 30 },
-    { nombre: 'Luis', apellido: 'López', edad: 28 },
-  ];
-
-  return (
-    <div>
-      <h1>Lista de usuarios</h1>
-      <TableData data={data} />
-      <button>Agregar usuario</button>
+    <div className="contacts-container">
+       <div className="contacts-section">
+      <div className="header">
+        <h2>Contactos</h2>
+        <button className="add-button">Agregar nuevo contacto</button>
+        <div className="search-icon">🔍</div>
+      </div>
+      {/* Aquí iría el contenido de la sección de contactos */}
+    </div>
     </div>
   );
-};
+}
 
 export default Contacts;
