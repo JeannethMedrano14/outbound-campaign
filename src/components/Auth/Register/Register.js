@@ -33,7 +33,7 @@ const Register = () => {
 <img src={logo} alt="Logo" className="logo" />
 
   </div>        
-  <form onSubmit={handleSubmit}>
+  <form onSubmit={handleSubmit} className="formContainer">
           {/* Tipo de documento */}
           <div>
             <label className="tipo-doc">Tipo de documento </label>
@@ -42,6 +42,7 @@ const Register = () => {
               value={formData.documentType}
               onChange={handleChange}
               style={{ fontSize: "16px", padding: "8px" }}
+              className="selectCC"
             >
               <option value="cc">Cédula de ciudadanía</option>
               <option value="nit">NIT</option>
