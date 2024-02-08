@@ -1,33 +1,121 @@
 .contacts-container {
-    background-color: #e4e1e1;
-    height: 100vh;
+  background-color: #e4e1e1;
+  height: 90vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contacts-section {
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  max-height: 90%;
+  background-color: white;
+  margin-top: 0px;
+}
+
+.header {
+  background-color: #1abcfe;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  h2 {
+    margin-left: 20px;
+    color: white;
   }
 
-  .contacts-section {
-    border: 2px solid blue; /* Borde del rectángulo exterior */
-    border-radius: 15px; /* Esquinas redondeadas del rectángulo exterior */
-    padding: 20px; /* Espacio interior del rectángulo exterior */
+  input[type="text"] {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
   }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid blue; /* Borde inferior del rectángulo del encabezado */
-    padding-bottom: 10px; /* Espacio entre el encabezado y el contenido */
+}
+
+.custom-button {
+  background-color: #6ad3fd;
+  color: rgb(254, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-1 {
+  transform: skewX(-20deg);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 5px;
+}
+.button-2 {
+  transform: skewX(-20deg);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.button-3 {
+  transform: skewX(-20deg);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.button-4 {
+  transform: skewX(-20deg);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.button-5 {
+  transform: skewX(-20deg);
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 5px;
+  margin-left: 5px;
+}
+
+.contacts-table {
+  margin-left: 40px;
+  border-collapse: collapse;
+  th {
+    color: #333;
   }
-  
-  .add-button {
-    background-color: blue; /* Fondo azul del botón */
-    color: white; /* Color del texto del botón */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px; /* Esquinas redondeadas del botón */
-    cursor: pointer;
+
+  td {
+    color: #666;
   }
-  
-  .search-icon {
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 0px 15px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.details-button {
+  background-color: #92adcc;
+  margin-right: 0px;
+}
+
+.edit-button {
+  background-color: #6f8eb1;
+  margin-left: 5px;
+}
+
+.delete-selection-button {
+  background-color: #ff0000;
+  float: right;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+}

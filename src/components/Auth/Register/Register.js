@@ -41,7 +41,6 @@ const Register = () => {
               name="documentType"
               value={formData.documentType}
               onChange={handleChange}
-              style={{ fontSize: "16px", padding: "8px" }}
               className="selectCC"
             >
               <option value="cc">Cédula de ciudadanía</option>
