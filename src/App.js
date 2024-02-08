@@ -7,10 +7,12 @@ import CampaignList from './components/Campaigns/Campaigns';
 import Login from './components/Auth/Login/Login';
 import Register from './components/Auth/Register/Register';
 import Navbar from './components/Navbar/Navbar'
+import Inicio from './components/Inicio/Inicio';
+
 
 const App = () => {
 
-  const navbarVisibleRoutes = ["/", "/contacts", "/campaigns", "/templates"];
+  const navbarVisibleRoutes = ["/contacts", "/campaigns", "/templates", "/inicio"];
 
   return (
     <Router>
@@ -20,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="/contacts" element={<ContactForm />} />
           <Route path="/templates" element={<TemplateList />} />
           <Route path="/campaigns" element={<CampaignList />} />
