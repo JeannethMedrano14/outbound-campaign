@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressBook, faBullhorn, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import contactos from '../../assets/images/contactos.png';
+import Plantillas from '../../assets/images/Plantillas.png'
+import campañas from '../../assets/images/campañas.png'
 import './Inicio.scss';
 
 const Inicio = () => {
@@ -9,31 +10,20 @@ const Inicio = () => {
         <div className="inicio-container">
             <div className="cuadroContacts">
                 <Link to="/contacts">
-                    <FontAwesomeIcon icon={faAddressBook} className="iconContact" />
-                    
-                    <div>
-                        <span className="textContactos">Contactos</span>
-                    </div>
+                    <img src={contactos} alt="contactos" className='contactos' />
                 </Link>
-
             </div>
+
             <div className="cuadroCampaing">
-                <Link to="/campaigns">
-                    <FontAwesomeIcon icon={faBullhorn} className="iconCampaing" />
-                    <div>
-                        <span className="textCampañas">Campañas</span>
-                    </div>
-                </Link>
-
-            </div>
-            <div className="cuadroTemplate">
                 <Link to="/templates">
-                    <FontAwesomeIcon icon={faFileAlt} className="iconTemplate" />
-                    <div>
-                        <span className="textPlantillas">Plantillas</span>
-                    </div>
+                    <img src={Plantillas} alt="Plantillas" className='Plantillas' />
                 </Link>
-
+            </div>
+            
+            <div className="cuadroTemplate">
+                <Link to="/campaigns">
+                    <img src={campañas} alt="campañas" className='campañas' />
+                </Link>
             </div>
         </div>
     );

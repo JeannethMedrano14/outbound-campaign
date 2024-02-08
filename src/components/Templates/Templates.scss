@@ -1,4 +1,177 @@
+.containerPrincipal {
+  background-color: rgba(128, 128, 128, 0.719);
+  padding: 42px 36px 10px 36px;
+}
+
 .templates-container {
-    background-color: #e4e1e1;
-    height: 100vh;
-  }
+
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #1ABCFE;
+}
+
+.tab {
+  color: white;
+  padding: 10px 10px 10px 32px;
+  border-radius: 5px;
+  font-size: 27px;
+}
+
+.create-button {
+  background-color: white;
+  color: blue;
+  padding: 10px 33px 10px 33px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px 29px 0px 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 10px;
+  margin-left: 46px;
+}
+
+.input-field {
+  margin-right: 10px;
+  padding: 8px;
+  width: 83%;
+}
+
+.buttonFiltrar {
+  padding: 10px 16px;
+  background-color: #4461F2;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 19px;
+}
+
+.input {
+  width: 32%;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 45px
+}
+
+.table {
+  width: 94%;
+  border: none;
+  margin-left: 43px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #1abdfe63;
+  border-top-left-radius: 10px;
+}
+
+th:first-child {
+  width: 50px;
+}
+
+td:first-child {
+  text-align: center;
+}
+
+.status-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-mark {
+  color: green;
+}
+
+.cross-mark {
+  color: red;
+}
+
+.preview-icon {
+  color: blue;
+}
+
+.btneditar,
+.btneliminar {
+  float: right;
+  margin: 14px 10px 17px 10px;
+  padding: 8px 31px 8px 31px;
+}
+
+.status-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-mark {
+  color: white;
+}
+
+.status-circle-equis {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(187, 12, 12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-Equis {
+  color: white;
+}
+
+
+.selected {
+  background-color: #f0f0f0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.containerbtn{
+  margin-right: 35px;
+}

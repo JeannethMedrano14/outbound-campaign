@@ -62,10 +62,11 @@ const LoginForm = () => {
                     </div>
 
                     <a href="#!" className='recuperarCont'>Recuperar Contraseña</a>
-
-                    <button type="submit" className="btnIniciarSesion">
-                        Iniciar Sesión
-                    </button>
+                    <Link to="/inicio">
+                        <button type="submit" className="btnIniciarSesion">
+                            Iniciar Sesión
+                        </button>
+                    </Link>
                 </form>
 
             </div>
