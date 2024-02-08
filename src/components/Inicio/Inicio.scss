@@ -13,11 +13,15 @@
   border-radius: 10px;
   background-color: #92adcc3d;
   margin: 10em 0px 0px 27px;
+  text-align: center;
+  
 }
 
-.Contactos{
-  border: 1px solid;
-  font-size: 26px;
+.textContactos, 
+.textCampañas, 
+.textPlantillas {
+  font-size: 2em;
+
 }
 
 .cuadroCampaing {
@@ -29,6 +33,7 @@
   border-radius: 10px;
   background-color: #1abdfe27;
   margin: 10em 0px 0px 0px;
+  text-align: center;
 }
 
 .cuadroTemplate {
@@ -40,11 +45,7 @@
   border-radius: 10px;
   background-color: #ee760d31;
   margin: 10em 27px 0px 0px;
-}
-
-.cuadro a {
-  text-decoration: none;
-  color: inherit;
+  text-align: center;
 }
 
 .iconContact {
@@ -62,8 +63,3 @@
   color: orange;
 }
 
-.texto {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  text-align: center;
-}

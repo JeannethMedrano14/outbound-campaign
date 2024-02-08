@@ -10,22 +10,30 @@ const Inicio = () => {
             <div className="cuadroContacts">
                 <Link to="/contacts">
                     <FontAwesomeIcon icon={faAddressBook} className="iconContact" />
+                    
+                    <div>
+                        <span className="textContactos">Contactos</span>
+                    </div>
                 </Link>
+
             </div>
             <div className="cuadroCampaing">
                 <Link to="/campaigns">
                     <FontAwesomeIcon icon={faBullhorn} className="iconCampaing" />
+                    <div>
+                        <span className="textCampañas">Campañas</span>
+                    </div>
                 </Link>
+
             </div>
             <div className="cuadroTemplate">
                 <Link to="/templates">
                     <FontAwesomeIcon icon={faFileAlt} className="iconTemplate" />
+                    <div>
+                        <span className="textPlantillas">Plantillas</span>
+                    </div>
                 </Link>
-            </div>
-            <div>
-                <span className="Contactos">Contactos</span>
-                <span Campañas="Campañas">Campañas</span>
-                <span className="Plantillas">Plantillas</span>
+
             </div>
         </div>
     );
