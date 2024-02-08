@@ -4,17 +4,16 @@
   justify-content: center;
   background-color: #e4e1e1;
   height: 100vh;
-  border-radius: 15px;
 }
 
 .register-left {
   background-color: white;
-  padding: 40px;
+  padding: 20px;
   margin-right: 60px;
-  max-width: 700px;
-  text-align: left;  margin-left: 250px;
+  text-align: left;
+  margin-left: 250px;
   border-radius: 15px;
-  height: 60%;
+  height: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -25,22 +24,21 @@
 .center-logo {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .logo {
   width: 300px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .tipo-doc {
   font-weight: bold;
   color: #524f4f;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .registration-image {
-  width: 45%;
+  width: 60%;
   border-radius: 20px;
 }
 
@@ -50,14 +48,14 @@
   gap: 20px;
   
   label {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
     font-weight: bold;
     color: #524f4f;
     
   }
   input {
-    font-size: 18px;
+    font-size: 14px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -67,8 +65,8 @@
 }
 
 .selectCC {
-  font-size: 16px;
-  padding: 12px;
+  font-size: 14px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 100%;
@@ -101,7 +99,7 @@ button {
   transition: background-color 0.3s ease;
   width: fit-content;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 button:hover {
@@ -111,7 +109,7 @@ button:hover {
 p {
   font-size: 10px;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #524f4f;
   text-align: center;
 }
@@ -120,6 +118,8 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .check input {
@@ -132,3 +132,4 @@ p {
   font-size: 10px;
   color: #524f4f;
 }
+
