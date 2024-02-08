@@ -1,0 +1,33 @@
+.contacts-container {
+    background-color: #e4e1e1;
+    height: 100vh;
+  }
+
+  .contacts-section {
+    border: 2px solid blue; /* Borde del rectángulo exterior */
+    border-radius: 15px; /* Esquinas redondeadas del rectángulo exterior */
+    padding: 20px; /* Espacio interior del rectángulo exterior */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid blue; /* Borde inferior del rectángulo del encabezado */
+    padding-bottom: 10px; /* Espacio entre el encabezado y el contenido */
+  }
+  
+  .add-button {
+    background-color: blue; /* Fondo azul del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Esquinas redondeadas del botón */
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
