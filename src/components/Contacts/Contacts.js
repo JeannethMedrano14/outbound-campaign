@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ModalCreateContact from './modalCreateContact/modalCreateContact';
+import ModalContactDetail from './modalContactDetail/modalContactDetail';
+import ModalEditContact from './modalEditContact/modalEditContact';
 import './Contacts.scss';
 import avatar1 from '../../assets/images/avatar1.jpg';//ej
 import avatar2 from '../../assets/images/avatar2.jpg'; //ej
@@ -8,7 +10,10 @@ function Contacts() {
     const [selectAll, setSelectAll] = useState(false);
     const [selectedContacts, setSelectedContacts] = useState(new Set());
     const [searchTerm, setSearchTerm] = useState('');
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalCreateOpen, setIsModalCreateOpen] = useState(false);
+    const [isModalDetailOpen, setIsModalDetailOpen] = useState(false);
+    const [isModalEditOpen, setIsModalEditOpen] = useState(false);
+    const [selectedContact, setSelectedContact] = useState(null); 
 
     // Datos de ejemplo
     const contactsData = [
@@ -51,18 +56,36 @@ function Contacts() {
     //   contact.name.toLowerCase().includes(searchTerm.toLowerCase())
     // );
 
-    const openModal = () => {
-      setIsModalOpen(true);
+      const openCreateModal = () => {
+        setIsModalCreateOpen(true);
     };
-  
-    const closeModal = () => {
-      setIsModalOpen(false);
+
+    const closeCreateModal = () => {
+        setIsModalCreateOpen(false);
     };
+
+    const openDetailModal = (contact) => {
+        setSelectedContact(contact);
+        setIsModalDetailOpen(true);
+    };
+
+    const closeDetailModal = () => {
+        setIsModalDetailOpen(false);
+    };
+
+    const openEditModal = (contact) => {
+      setSelectedContact(contact);
+      setIsModalEditOpen(true);
+  };
+
+  const closeEditModal = () => {
+      setIsModalEditOpen(false);
+  };
 
   return (
     <div className="contacts-container">
        <div className="contacts-section">
-      <div className="header">
+      <div className="contacts-header">
         <h2>Contactos</h2>
         <input className='buscarcontactos'
             type="text"
@@ -72,7 +95,7 @@ function Contacts() {
           />
       </div>
       <div className="button-container">
-          <button className="custom-button button-1" onClick={openModal}>Crear contacto</button>
+      <button className="custom-button button-1" onClick={openCreateModal}>Crear contacto</button>
           <button className="custom-button button-2">Exportar contactos</button>
           <button className="custom-button button-3">Exportar contactos buscados</button>
           <button className="custom-button button-4">Importar contactos archivo plano</button>
@@ -114,8 +137,8 @@ function Contacts() {
                 <td>{contact.city}</td>
                 <td>{contact.code}</td>
                 <td>
-                  <button className="details-button">Detalles</button>
-                  <button className="edit-button">Editar</button>
+                <button className="details-button" onClick={() => openDetailModal(contact)}>Detalles</button>
+                <button className="edit-button" onClick={() => openEditModal(contact)}>Editar</button>
                 </td>
               </tr>
             ))}
@@ -128,8 +151,9 @@ function Contacts() {
           <span className="delete-icon">&#128465;</span> Eliminar selección
         </button>
             </div>
-            <ModalCreateContact isOpen={isModalOpen} onClose={closeModal} /> {/* Cambia el nombre aquí */}
-
+            <ModalCreateContact isOpen={isModalCreateOpen} onClose={closeCreateModal} />
+            <ModalContactDetail isOpen={isModalDetailOpen} onClose={closeDetailModal} contact={selectedContact} /> {/* Pasa el contacto seleccionado como prop */}
+            <ModalEditContact isOpen={isModalEditOpen} onClose={closeEditModal} contact={selectedContact} />
     </div>
   );
 }

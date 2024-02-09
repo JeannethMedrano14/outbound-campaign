@@ -107,18 +107,18 @@ const Register = () => {
               checked={formData.agreeTerms}
               onChange={handleChange}
             />
-            <p>
+            <p className="policy">
               He leído y estoy de acuerdo con la política de privacidad y protección de datos personales de SmartSoft Solutions SAS.
             </p>
           </div>
 
-          <p>
+          <p className="policy">
             Tus datos personales se utilizarán para mejorar tu experiencia en
             esta web, gestionar el acceso a tu cuenta, darte un adecuado soporte
             y otros propósitos descritos en nuestra política de privacidad.
           </p>
 
-          <button className='buttonregist' type="submit">Realizar registro</button>
+          <button className="register-button" type="submit">Realizar registro</button>
         </form>
       </div>
       <div className="register-right">
