@@ -1,12 +1,26 @@
-.inicio-container {
+.containerInicio{
+  background-color: #e4e1e1;
+  height: 90vh;
+  margin-top: 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.inicio-container {
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  max-height: 90%;
+  background-color: white;
+  margin-top: 0px;
+  display: flex;
 }
 
 .contactos, .Plantillas, .campañas {
-  width: 78%;
+  width: 77%;
   height: auto;
   margin-top: 7em;
-  margin-left: 3.5em;
+  margin-left: 2.5em;
 }

@@ -33,17 +33,17 @@ const LoginForm = () => {
                 </div>
                 <h1 className="title">Iniciar Sesión</h1>
                 <form>
-                    <label htmlFor="tipoDocumento">Tipo de Documento:</label>
+                    <label className='label' htmlFor="tipoDocumento">Tipo de Documento:</label>
                     <select id="tipoDocumento" name="tipoDocumento" className="Ilogin" required placeholder="">
                         <option value="">Seleccionar tipo de documento</option>
                         <option value="Cedula">Cédula de Ciudadanía</option>
                         <option value="Carnet de identidad">Id de compañía</option>
                         <option value="Pasaporte">NIT</option>
                     </select>
-                    <label htmlFor="usuario">Nombre de Usuario:</label>
+                    <label className='label' htmlFor="usuario">Nombre de Usuario:</label>
                     <input type="text" id="usuario" className="Ilogin" name="usuario" required placeholder='Ingrese su usuario' />
 
-                    <label htmlFor="contrasena">Contraseña:</label>
+                    <label className='label' htmlFor="contrasena">Contraseña:</label>
                     <div className="password-container" placeholder="Ingrese su contraseña">
                         <input
                             type={showPassword ? 'text' : 'password'}

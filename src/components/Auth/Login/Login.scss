@@ -49,6 +49,9 @@
     color: #4461F2;
     font-size: 12px;
     margin-left: 10px;
+    border-radius: 7px;
+    padding: 6px;
+    border: 1px solid blue;
   }
   
   .login-text {
@@ -64,14 +67,13 @@
     background-color: rgba(217, 217, 217, 0.5333333333);
     width: 100%;
   
-    label {
+    .label {
       margin-bottom: 8px;
       display: block;
     }
   
     select.Ilogin,
-    input.Ilogin,
-    input[type="password"].Ilogin {
+    .Ilogin {
       margin-bottom: 16px;
       padding: 8px;
       font-size: 14px;
@@ -82,7 +84,7 @@
       color: grey;
     }
   
-    input {
+    .Ilogin {
       margin-bottom: 16px;
       padding: 8px;
       font-size: 14px;
@@ -91,7 +93,7 @@
     .password-container {
       position: relative;
   
-      input {
+      .Ilogin {
         width: 100%; 
 
       }
@@ -119,12 +121,14 @@
       background-color: #4461F2;
       color: white;
       padding: 10px;
-      border: none;
       cursor: pointer;
       font-size: 16px;
       width: 20em;
       margin-top: 4em;
       margin-left: 3em;
+      border-radius: 7px;
+      border: none;
+      box-shadow: 3px 5px 0px blue;
   
       &:hover {
         background-color: #1e2958;

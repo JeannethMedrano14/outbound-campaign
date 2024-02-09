@@ -1,11 +1,20 @@
 .containerPrincipal {
-  background-color: rgba(128, 128, 128, 0.719);
-  padding: 42px 36px 10px 36px;
+  background-color: #e4e1e1;
+  height: 90vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .templates-container {
-
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  max-height: 90%;
   background-color: white;
+  margin-top: 0px;
 }
 
 .header {
@@ -26,10 +35,10 @@
 .create-button {
   background-color: white;
   color: blue;
-  padding: 10px 33px 10px 33px;
-  border-radius: 50px;
+  padding: 5px 24px 8px 24px;
+  border-radius: 7px;
   cursor: pointer;
-  margin: 10px 29px 0px 0px;
+  margin: 0px 29px 0px 0px;
 }
 
 .content {
@@ -37,7 +46,7 @@
   flex-direction: column;
 }
 
-h2 {
+.titulo {
   margin-bottom: 10px;
   margin-left: 46px;
 }
@@ -53,17 +62,19 @@ h2 {
   background-color: #4461F2;
   color: white;
   border: none;
-  border-radius: 22px;
+  border-radius: 7px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-left: 19px;
 }
 
-.input {
-  width: 32%;
-  border-radius: 5px;
+.inputbuscar {
+  width: 46%;
+  border: 1px solid #ccc;
   height: 30px;
-  margin-left: 45px
+  margin-left: 45px;
+  padding: 3px;
+  border-radius: 6px;
 }
 
 .table {
@@ -72,41 +83,24 @@ h2 {
   margin-left: 43px;
 }
 
-th,
-td {
+.th,
+.td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
 
-th {
+.th {
   background-color: #1abdfe63;
   border-top-left-radius: 10px;
 }
 
-th:first-child {
+.th:first-child {
   width: 50px;
 }
 
-td:first-child {
+.td:first-child {
   text-align: center;
-}
-
-.status-circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.check-mark {
-  color: green;
-}
-
-.cross-mark {
-  color: red;
 }
 
 .preview-icon {
@@ -117,7 +111,14 @@ td:first-child {
 .btneliminar {
   float: right;
   margin: 14px 10px 17px 10px;
-  padding: 8px 31px 8px 31px;
+  padding: 8px 31px 8px 34px;
+  background-color: #4461F2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 19px;
 }
 
 .status-circle {
@@ -128,10 +129,7 @@ td:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.check-mark {
-  color: white;
+  margin: auto;
 }
 
 .status-circle-equis {
@@ -142,12 +140,24 @@ td:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .check-Equis {
   color: white;
 }
 
+.check-mark {
+  color: green;
+}
+
+.cross-mark {
+  color: red;
+}
+
+.check-mark {
+  color: white;
+}
 
 .selected {
   background-color: #f0f0f0;
@@ -166,12 +176,14 @@ td:first-child {
   z-index: 999;
 }
 
-.modal {
+.modalEliminar {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 25%;
 }
 
-.containerbtn{
+.containerbtn {
   margin-right: 35px;
 }

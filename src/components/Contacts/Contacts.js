@@ -64,7 +64,7 @@ function Contacts() {
        <div className="contacts-section">
       <div className="header">
         <h2>Contactos</h2>
-        <input
+        <input className='buscarcontactos'
             type="text"
             placeholder="Buscar contactos"
             value={searchTerm}

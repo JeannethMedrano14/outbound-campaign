@@ -16,27 +16,27 @@ function modalCreateContact({ isOpen, onClose }) {
         
         <div className="form-group">
           <label htmlFor="documentType">Tipo de documento:</label>
-          <input type="text" id="documentType" />
+          <input className='input' type="text" id="documentType" />
         </div>
         <div className="form-group">
           <label htmlFor="identification">Identificación:</label>
-          <input type="text" id="identification" />
+          <input className='input' type="text" id="identification" />
         </div>
         <div className="form-group">
           <label htmlFor="name">Nombre:</label>
-          <input type="text" id="name" />
+          <input className='input' type="text" id="name" />
         </div>
         <div className="form-group">
           <label htmlFor="phone">Teléfono:</label>
-          <input type="text" id="phone" />
+          <input className='input' type="text" id="phone" />
         </div>
         <div className="form-group">
           <label htmlFor="country">País:</label>
-          <input type="text" id="country" />
+          <input className='input' type="text" id="country" />
         </div>
         <div className="form-group">
           <label htmlFor="city">Ciudad:</label>
-          <input type="text" id="city" />
+          <input className='input' type="text" id="city" />
         </div>
       </div>
       <button className="save-button">Guardar</button>

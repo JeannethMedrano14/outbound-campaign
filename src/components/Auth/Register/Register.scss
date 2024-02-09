@@ -86,7 +86,7 @@
   align-items: center;
 }
 
-button {
+.buttonregist {
   display: inline-block; 
   font-size: 14px;
   padding: 8px 16px;
@@ -100,10 +100,6 @@ button {
   width: fit-content;
   margin: 0 auto;
   margin-top: 5px;
-}
-
-button:hover {
-  background-color: darkpurple;
 }
 
 p {

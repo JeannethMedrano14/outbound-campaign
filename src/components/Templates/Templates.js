@@ -40,8 +40,8 @@ function Templates() {
         </div>
         <div className="content">
           <div className="filter-wrapper">
-            <h2>Filtrar por título</h2>
-            <input type="text" placeholder="Ingrese el título" className='input' />
+            <h2 className='titulo'>Filtrar por título</h2>
+            <input type="text" placeholder="Ingrese el título" className='inputbuscar' />
             <button className='buttonFiltrar'>Filtrar y Buscar</button>
           </div>
           <div className='containerbtn'>
@@ -51,133 +51,58 @@ function Templates() {
           <table className="table">
             <thead>
               <tr>
-                <th><input type="checkbox" /></th>
-                <th>Title</th>
-                <th>Type</th>
-                <th>Message</th>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Preview</th>
+                <th className='th'><input type="checkbox" /></th>
+                <th className='th'>Title</th>
+                <th className='th'>Type</th>
+                <th className='th'>Message</th>
+                <th className='th'>Category</th>
+                <th className='th'>Status</th>
+                <th className='th'>Preview</th>
               </tr>
             </thead>
             <tbody>
               <tr onClick={() => handleRowClick(1)} className={selectedRows.includes(1) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(1)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
+                <td className='td'><input type="checkbox" checked={selectedRows.includes(1)} onChange={() => { }} /></td>
+                <td className='td'>Ejemplo de título</td>
+                <td className='td'>Ejemplo de tipo</td>
+                <td className='td'>Ejemplo de mensaje</td>
+                <td className='td'>Ejemplo de categoría</td>
+                <td className='td'>
                   <div className="status-circle">
                     <span className="check-mark">&#10003;</span>
                   </div>
                 </td>
-                <td>
+                <td className='td'>
                   <span className="preview-icon">&#128065;</span>
                 </td>
               </tr>
               <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
+                <td className='td'><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
+                <td className='td'>Ejemplo de título</td>
+                <td className='td'> Ejemplo de tipo</td>
+                <td className='td'>Ejemplo de mensaje</td>
+                <td className='td'>Ejemplo de categoría</td>
+                <td className='td'>
                   <div className="status-circle-equis">
                     <span className="check-Equis">&#10007;</span>
                   </div>
                 </td>
-                <td>
+                <td className='td'>
                   <span className="preview-icon">&#128065;</span>
                 </td>
               </tr>
               <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
+                <td className='td'><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
+                <td className='td'>Ejemplo de título</td>
+                <td className='td'>Ejemplo de tipo</td>
+                <td className='td'>Ejemplo de mensaje</td>
+                <td className='td'>Ejemplo de categoría</td>
+                <td className='td'>
                   <div className="status-circle-equis">
                     <span className="check-Equis">&#10007;</span>
                   </div>
                 </td>
-                <td>
-                  <span className="preview-icon">&#128065;</span>
-                </td>
-              </tr>
-              <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
-                  <div className="status-circle-equis">
-                    <span className="check-Equis">&#10007;</span>
-                  </div>
-                </td>
-                <td>
-                  <span className="preview-icon">&#128065;</span>
-                </td>
-              </tr>
-              <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
-                  <div className="status-circle-equis">
-                    <span className="check-Equis">&#10007;</span>
-                  </div>
-                </td>
-                <td>
-                  <span className="preview-icon">&#128065;</span>
-                </td>
-              </tr>
-              <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
-                  <div className="status-circle-equis">
-                    <span className="check-Equis">&#10007;</span>
-                  </div>
-                </td>
-                <td>
-                  <span className="preview-icon">&#128065;</span>
-                </td>
-              </tr>
-              <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
-                  <div className="status-circle-equis">
-                    <span className="check-Equis">&#10007;</span>
-                  </div>
-                </td>
-                <td>
-                  <span className="preview-icon">&#128065;</span>
-                </td>
-              </tr>
-              <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td>Ejemplo de título</td>
-                <td>Ejemplo de tipo</td>
-                <td>Ejemplo de mensaje</td>
-                <td>Ejemplo de categoría</td>
-                <td>
-                  <div className="status-circle-equis">
-                    <span className="check-Equis">&#10007;</span>
-                  </div>
-                </td>
-                <td>
+                <td className='td'>
                   <span className="preview-icon">&#128065;</span>
                 </td>
               </tr>
@@ -186,7 +111,7 @@ function Templates() {
         </div>
         {showModal && (
           <div className="modal-overlay">
-            <div className="modal">
+            <div className="modalEliminar">
               <FontAwesomeIcon icon="fa-solid fa-triangle-exclamation" style={{ color: "#f45d5d", }} />
               <span>Eliminar Template</span>
               <p>¿Seguro que deseas eliminar template?</p>

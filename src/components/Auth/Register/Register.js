@@ -118,7 +118,7 @@ const Register = () => {
             y otros propósitos descritos en nuestra política de privacidad.
           </p>
 
-          <button type="submit">Realizar registro</button>
+          <button className='buttonregist' type="submit">Realizar registro</button>
         </form>
       </div>
       <div className="register-right">
