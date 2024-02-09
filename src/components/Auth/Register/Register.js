@@ -100,6 +100,7 @@ const Register = () => {
             </div>
           </div>
 
+
           <div className="check">
             <input
               type="checkbox"
