@@ -1,17 +1,17 @@
 import React from 'react';
-import './modalCreateContact.scss';
+import './modalContactDetail.scss';
 
-function modalCreateContact({ isOpen, onClose }) {
+function modalContactDetail({ isOpen, onClose }) {
   if (!isOpen) {
     return null;
   }
 
   return (
-    <div className="modal-create">
+    <div className="modal-detail">
     <div className="modal-content">
      <div className='modal-header'>
-      <h2>Crear contacto</h2>
-      <button className="close-button-create" onClick={onClose}>&larr;</button>
+      <h2>Detalle del contacto</h2>
+      <button className="close-button-detail" onClick={onClose}>&larr;</button>
      </div>
       <div className="form-container">
         
@@ -46,4 +46,4 @@ function modalCreateContact({ isOpen, onClose }) {
 );
 }
 
-export default modalCreateContact;
+export default modalContactDetail;
