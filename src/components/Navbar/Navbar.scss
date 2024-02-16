@@ -9,7 +9,7 @@
 }
 
 .logo {
-  height: 60px; /* Reducir la altura del logo */
+  height: 60px;
   width: auto; 
   margin-top: 50px;
 }
@@ -38,6 +38,31 @@
 .icons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   font-size: 24px;
+  margin-right: 20px;
 }
+
+.navbar-list {
+  .popover {
+    background-color: #54ceff;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+  }
+
+  .popover-body {
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px;
+      box-sizing: border-box; 
+      &:hover {
+        background-color: #6f8eb1;
+      }
+    }
+  }
+}
+

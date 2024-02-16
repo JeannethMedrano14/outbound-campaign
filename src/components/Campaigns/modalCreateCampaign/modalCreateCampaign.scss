@@ -1,0 +1,123 @@
+.modal-create-campaign {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e4e1e1;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1000px;
+    height: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header-create-campaign {
+    background-color: #1abcfe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  
+    h2 {
+      margin-left: 350px;
+      color: white;
+    }
+  }
+  
+  .close-button-create-campaign {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: -420px;
+    overflow-y: auto;
+  }
+  
+  .modal-content-create-campaign {
+    background-color: white;
+    border-radius: 0px 15px;
+    width: 96%;
+    max-height: 560px;
+    overflow-y: auto;
+    padding: 5px 20px;
+  
+    input[type="text"] {
+      width: 90%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      // margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+  
+  .select-template-button {
+    background-color: #6f8eb1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .select-template-button:hover {
+    background-color: #1abcfe;
+  }
+  
+  .clear-filter-campaign {
+    display: flex; /* Utiliza flexbox para alinear el contenido horizontalmente */
+    align-items: center; /* Alinea verticalmente el contenido */
+    background-color: #6f8eb1;
+    color: white;
+    border: none;
+    padding: 10px 30px; /* Ajusta el ancho del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .clear-filter-campaign:hover {
+    background-color: #1abcfe;
+  }
+
+  .clear-filter-campaign span {
+    margin-right: 5px;
+  }
+  .template-item {
+    width: 48%;
+    display: inline-block; /* Hace que los elementos se muestren en línea */
+    margin-bottom: 20px; /* Espacio entre las filas */
+    margin-right: 2%;
+
+    img {
+      width: 150px; // Ancho deseado para la imagen
+      height: 112px; // Alto deseado para la imagen
+    }
+  }
+  
+  .search-container-template {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-filter-template{
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .form-container-create-campaign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye las plantillas uniformemente */
+  }
