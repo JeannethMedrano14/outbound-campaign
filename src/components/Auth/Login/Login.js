@@ -28,7 +28,7 @@ const LoginForm = () => {
                     <FontAwesomeIcon icon={faAngleDown} className="arrow-icon lenguaje" />
                     <span className="login-text">Iniciar Sesión</span>
                     <Link to="/register">
-                        <button className="register-button">Regístrate</button>
+                        <button className="registerbtn">Regístrate</button>
                     </Link>
                 </div>
                 <h1 className="title">Iniciar Sesión</h1>

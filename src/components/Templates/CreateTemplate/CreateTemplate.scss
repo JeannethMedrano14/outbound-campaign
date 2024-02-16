@@ -1,0 +1,113 @@
+.ContainerPrincipal {
+    background-color: #e4e1e1;
+    height: 90vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ContainerSecundario {
+    border-radius: 15px;
+    width: 90%;
+    height: 90%;
+    max-height: 90%;
+    background-color: white;
+    margin-top: 0px;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #1ABCFE;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.tab {
+    color: white;
+    padding: 10px 10px 10px 32px;
+    border-radius: 5px;
+    font-size: 27px;
+}
+
+.contentt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.ContenedorInput {
+    margin: 10px 59px 9px 81px;
+    position: relative;
+
+    .Etiqueta {
+        margin-right: 10px;
+    }
+
+    .Input,
+    .Select {
+        width: calc(100% - 30px);
+        height: 2.5em;
+        border: 2px solid #555;
+        border-radius: 7px;
+        background-color: #f5f5f5;
+        position: relative;
+
+        &::placeholder {
+            color: #777;
+        }
+    }
+
+    .InputAncho {
+        width: calc(100% - 30px);
+        height: 8em;
+        border: 2px solid #555;
+        border-radius: 7px;
+        background-color: #f5f5f5;
+        position: relative;
+    }
+
+    .IconoInterrogacion {
+        position: absolute;
+        right: 0px;
+        top: 62%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+
+        i {
+            color: #555;
+        }
+
+        &:hover::after {
+            content: attr(title);
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    }
+}
+
+.Boton {
+    margin-top: 20px;
+    width: 29%;
+    margin-left: 40em;
+    background-color: #1ABCFE;
+    color: white;
+}

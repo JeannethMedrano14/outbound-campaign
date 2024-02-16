@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Templates.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ModalEliminar from './ModalEliminar/modalEliminar';
+import ModalEditar from './ModalEditar/modalEditar';
 
 function Templates() {
   const [selectedRows, setSelectedRows] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const [showModalEliminar, setShowModalEliminar] = useState(false);
+  const [showModalEditar, setShowModalEditar] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleRowClick = (index) => {
     let newSelectedRows = [...selectedRows];
@@ -16,19 +21,33 @@ function Templates() {
     setSelectedRows(newSelectedRows);
   };
 
-
-
   const handleDeleteButtonClick = () => {
-    setShowModal(true);
+    setShowModalEliminar(true);
   };
 
-  const handleCancelDelete = () => {
-    setShowModal(false);
+  const handleEditButtonClick = () => {
+    setShowModalEditar(true);
   };
 
-  const handleConfirmDelete = () => {
-    setShowModal(false);
+  const handleCreateTemplateButtonClick = () => {
+    navigate('/createTemplate');
+  };
+
+  const handleCancelEliminar = () => {
+    setShowModalEliminar(false);
+  };
+
+  const handleConfirmEliminar = () => {
+    setShowModalEliminar(false);
     setSelectedRows([]);
+  };
+
+  const handleCancelEdit = () => {
+    setShowModalEditar(false);
+  };
+
+  const handleConfirmEdit = () => {
+    setShowModalEditar(false);
   };
 
   return (
@@ -36,7 +55,9 @@ function Templates() {
       <div className="templates-container">
         <div className="header">
           <div className="tab">Plantillas</div>
-          <div className="create-button">Crear Plantilla</div>
+          <button className="create-button" onClick={handleCreateTemplateButtonClick}>
+            Crear Plantilla
+          </button>
         </div>
         <div className="content">
           <div className="filter-wrapper">
@@ -46,7 +67,7 @@ function Templates() {
           </div>
           <div className='containerbtn'>
             <button className='btneliminar' onClick={handleDeleteButtonClick}>Eliminar</button>
-            <button className='btneditar'>Editar</button>
+            <button className='btneditar' onClick={handleEditButtonClick}>Editar</button>
           </div>
           <table className="table">
             <thead>
@@ -91,35 +112,19 @@ function Templates() {
                   <span className="preview-icon">&#128065;</span>
                 </td>
               </tr>
-              <tr onClick={() => handleRowClick(0)} className={selectedRows.includes(0) ? 'selected' : ''}>
-                <td className='td'><input type="checkbox" checked={selectedRows.includes(0)} onChange={() => { }} /></td>
-                <td className='td'>Ejemplo de título</td>
-                <td className='td'>Ejemplo de tipo</td>
-                <td className='td'>Ejemplo de mensaje</td>
-                <td className='td'>Ejemplo de categoría</td>
-                <td className='td'>
-                  <div className="status-circle-equis">
-                    <span className="check-Equis">&#10007;</span>
-                  </div>
-                </td>
-                <td className='td'>
-                  <span className="preview-icon">&#128065;</span>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
-        {showModal && (
-          <div className="modal-overlay">
-            <div className="modalEliminar">
-              <FontAwesomeIcon icon="fa-solid fa-triangle-exclamation" style={{ color: "#f45d5d", }} />
-              <span>Eliminar Template</span>
-              <p>¿Seguro que deseas eliminar template?</p>
-              <button onClick={handleCancelDelete}>Cancelar</button>
-              <button onClick={handleConfirmDelete}>Eliminar</button>
-            </div>
-          </div>
-        )}
+        <ModalEliminar
+          showModal={showModalEliminar}
+          handleCancelDelete={handleCancelEliminar}
+          handleConfirmDelete={handleConfirmEliminar}
+        />
+        <ModalEditar
+          showModal={showModalEditar}
+          handleCancelEdit={handleCancelEdit}
+          handleConfirmEdit={handleConfirmEdit}
+        />
       </div>
     </div>
   );
