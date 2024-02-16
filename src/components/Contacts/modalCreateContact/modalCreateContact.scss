@@ -11,7 +11,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.modal-header {
+.modal-header-create {
   background-color: #1abcfe;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
   border-top-right-radius: 15px;
 
   h2 {
-    margin-left: 160px;
+    margin-left: 130px;
     color: white;
   }
 }
@@ -31,10 +31,10 @@
   color: white;
   font-size: 24px;
   cursor: pointer;
-  margin-left: -320px;
+  margin-left: -150px;
 }
 
-.modal-content {
+.modal-content-create {
   background-color: white;
   border-radius: 15px;
   width: 100%;
@@ -57,7 +57,7 @@
   }
 }
 
-.save-button {
+.save-button-create {
   background-color: #6f8eb1;
   color: white;
   border: none;
@@ -70,6 +70,6 @@
   margin-top: 20px;
 }
 
-.save-button:hover {
+.save-button-create:hover {
   background-color: #148f77;
 }

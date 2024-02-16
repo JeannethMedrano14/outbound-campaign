@@ -6,12 +6,12 @@
   background-color: #e4e1e1;
   border-radius: 10px;
   padding: 10px;
-  width: 100%;
+  width: 50%;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.modal-header {
+.modal-header-edit {
   background-color: #1abcfe;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
   border-top-right-radius: 15px;
 
   h2 {
-    margin-left: 160px;
+    margin-left: 110px;
     color: white;
   }
 }
@@ -31,10 +31,10 @@
   color: white;
   font-size: 24px;
   cursor: pointer;
-  margin-left: -320px;
+  margin-left: -150px;
 }
 
-.modal-content {
+.modal-content-edit {
   background-color: white;
   border-radius: 15px;
   width: 100%;
@@ -57,7 +57,7 @@
   }
 }
 
-.save-button {
+.save-button-edit {
   background-color: #6f8eb1;
   color: white;
   border: none;
@@ -70,6 +70,6 @@
   margin-top: 20px;
 }
 
-.save-button:hover {
+.save-button-edit:hover {
   background-color: #148f77;
 }

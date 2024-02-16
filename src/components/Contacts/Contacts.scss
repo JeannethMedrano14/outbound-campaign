@@ -39,13 +39,23 @@
   }
 }
 
-.custom-button {
+.button-container-contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.custom-button-contacts {
   background-color: #6ad3fd;
   color: rgb(254, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  padding: 15px;
+  margin-bottom: 5px;
 }
 
 .button-1 {
@@ -79,20 +89,19 @@
 }
 
 .contacts-table {
+  width: 100%;
   margin-left: 40px;
   border-collapse: collapse;
   th {
     color: #333;
+    height: 30px;
+    padding: 5px 5px;
   }
 
   td {
     color: #666;
+    padding: 0px 15px;
   }
-}
-
-.contacts-table th,
-.contacts-table td {
-  padding: 0px 15px;
 }
 
 .avatar {
@@ -103,12 +112,34 @@
 
 .details-button {
   background-color: #92adcc;
-  margin-right: 0px;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
 .edit-button {
   background-color: #6f8eb1;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
   margin-left: 5px;
+  margin-top: 5px;
 }
 
 .delete-selection-button {
@@ -118,4 +149,15 @@
   position: absolute;
   bottom: 40px;
   right: 60px;
+  font-size: 14px;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  margin-left: 5px;
+  margin-top: 5px;
 }
