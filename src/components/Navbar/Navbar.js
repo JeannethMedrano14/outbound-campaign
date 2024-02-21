@@ -4,11 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faCog, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Popover, PopoverBody } from "reactstrap";
 import logo from "../../assets/images/logo.png";
+import ProfileModal from "./NavbarModals/ProfileModal";
+import AccountModal from "./NavbarModals/AccountModal";
+import AdminSettingsModal from "./NavbarModals/AdminSettingsModal";
+import ChangePasswordModal from "./NavbarModals/ChangePasswordModal";
+import BillingDataModal from "./NavbarModals/BillingDataModal";
 import "./Navbar.scss";
 
 const Navbar = () => {
   const location = useLocation();
   const [activePopover, setActivePopover] = useState(null);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
+  const [isChangePasswordModalOpen, setIsChangePasswordModalOpen] = useState(false);
+  const [isBillingModalOpen, setIsBillingModalOpen] = useState(false);
   const notificationsRef = useRef(null);
   const configRef = useRef(null);
   const userRef = useRef(null);
@@ -21,12 +31,29 @@ const Navbar = () => {
     }
   };
 
+  const toggleProfileModal = () => {
+    setIsProfileModalOpen(!isProfileModalOpen);
+  };
+
+  const toggleAccountModal = () => {
+    setIsAccountModalOpen(!isAccountModalOpen);
+  };
+  
+  const toggleAdminModal = () => {
+    setIsAdminModalOpen(!isAdminModalOpen);
+  };
+  
+  const toggleChangePasswordModal = () => {
+    setIsChangePasswordModalOpen(!isChangePasswordModalOpen);
+  };
+  
+  const toggleBillingModal = () => {
+    setIsBillingModalOpen(!isBillingModalOpen);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        activePopover &&
-        !event.target.closest(`#${activePopover}`)
-      ) {
+      if (activePopover && !event.target.closest(`#${activePopover}`)) {
         setActivePopover(null);
       }
     };
@@ -69,35 +96,71 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="icons">
-        <FontAwesomeIcon icon={faBell} id="notifications" onClick={() => togglePopover("notifications")} />
-        <Popover isOpen={activePopover === "notifications"} target="notifications" innerRef={notificationsRef} placement="bottom" className="navbar-list">
+        <FontAwesomeIcon
+          icon={faBell}
+          id="notifications"
+          onClick={() => togglePopover("notifications")}
+        />
+        <Popover
+          isOpen={activePopover === "notifications"}
+          target="notifications"
+          innerRef={notificationsRef}
+          placement="bottom"
+          className="navbar-list"
+        >
           <PopoverBody>
-            <h6>Notificaciones (0)</h6>
+            <h4>Notificaciones (0)</h4>
             <input type="text" placeholder="Buscar notificaciones" />
             <p>No hay notificaciones</p>
           </PopoverBody>
         </Popover>
-        <FontAwesomeIcon icon={faCog} id="config" onClick={() => togglePopover("config")} />
-        <Popover isOpen={activePopover === "config"} target="config" innerRef={configRef} placement="bottom" className="navbar-list">
+        <FontAwesomeIcon
+          icon={faCog}
+          id="config"
+          onClick={() => togglePopover("config")}
+        />
+        <Popover
+          isOpen={activePopover === "config"}
+          target="config"
+          innerRef={configRef}
+          placement="bottom"
+          className="navbar-list"
+        >
           <PopoverBody>
             <ul>
-              <li>Configuración administradores</li>
-              <li>Datos de facturación</li>
+              <li onClick={toggleAdminModal}>Configuración administradores</li>
+              <li onClick={toggleBillingModal}>Datos de facturación</li>
             </ul>
           </PopoverBody>
         </Popover>
-        <FontAwesomeIcon icon={faUser} id="user" onClick={() => togglePopover("user")} />
-        <Popover isOpen={activePopover === "user"} target="user" innerRef={userRef} placement="bottom" className="navbar-list">
+        <FontAwesomeIcon
+          icon={faUser}
+          id="user"
+          onClick={() => togglePopover("user")}
+        />
+        <Popover
+          isOpen={activePopover === "user"}
+          target="user"
+          innerRef={userRef}
+          placement="bottom"
+          className="navbar-list"
+        >
           <PopoverBody>
             <ul>
-              <li>Datos de cuenta</li>
-              <li>Perfil</li>
-              <li>Cambiar contraseña</li>
+              <li onClick={toggleAccountModal}>Datos de cuenta</li>
+              <li onClick={toggleProfileModal}>Perfil</li>
+              <li onClick={toggleChangePasswordModal}>Cambiar contraseña</li>
               <li>Cerrar sesión</li>
             </ul>
           </PopoverBody>
         </Popover>
       </div>
+      {/* Renderizamos los modales */}
+      <ProfileModal isOpen={isProfileModalOpen} onClose={toggleProfileModal} />
+      <AccountModal isOpen={isAccountModalOpen} onClose={toggleAccountModal} />
+      <AdminSettingsModal isOpen={isAdminModalOpen} onClose={toggleAdminModal} />
+      <ChangePasswordModal isOpen={isChangePasswordModalOpen} onClose={toggleChangePasswordModal} />
+      <BillingDataModal isOpen={isBillingModalOpen} onClose={toggleBillingModal} />
     </nav>
   );
 };

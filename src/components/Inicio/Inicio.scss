@@ -1,4 +1,4 @@
-.containerInicio{
+.startup-container {
   background-color: #e4e1e1;
   height: 90vh;
   margin-top: 20px;
@@ -8,19 +8,155 @@
   position: relative;
 }
 
-.inicio-container {
+.home-container {
   border-radius: 15px;
   width: 90%;
   height: 90%;
   max-height: 90%;
   background-color: white;
   margin-top: 0px;
-  display: flex;
+  flex-direction: column;
 }
 
-.contactos, .Plantillas, .campañas {
-  width: 77%;
-  height: auto;
-  margin-top: 7em;
-  margin-left: 2.5em;
+.time-filter {
+  position: absolute;
+  top: 50px;
+  right: 120px;
+  color: rgb(78, 78, 78);
+  select {
+    color: rgb(78, 78, 78);
+    border-radius: 5px;
+    font-size: 16px;
+  }
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #e4e1e1;
+  padding: 10px;
+  color: rgb(78, 78, 78);
+  p {
+    margin: 5px;
+  }
+  span {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .total {
+    color: blue;
+  }
+  
+  .percentage-delivered {
+    color: orange;
+  }
+  
+  .percentage-read {
+    color: green;
+  }
+  
+  .percentage-undelivered {
+    color: red;
+  }
+  
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+
+.rectangle {
+  width: 30%;
+  margin-top: 30px;
+  background-color: #e4e1e1;
+  padding: 0px 10px;
+  border-radius: 10px;
+  text-align: left;
+  color: rgb(78, 78, 78);
+
+  .campaign-info {
+    margin: 2px 0;
+  }
+}
+
+.rectangle-icon {
+  width: 30%;
+  margin-top: 30px;
+  background-color: #e4e1e1;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.link-template {
+  text-decoration: none;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.rectangle-icon p {
+  margin-top: 10px;
+  width: 100%;
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+}
+
+.card-titulo {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.icon-file-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1abcfe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-file-circle svg {
+  color: white;
+}
+
+.icon-bull-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-bull-circle svg {
+  color: white;
+}
+
+.campaign-list {
+  float: right;
+margin-right: 120px;
+ul {
+  list-style-type: none;
+}
 }

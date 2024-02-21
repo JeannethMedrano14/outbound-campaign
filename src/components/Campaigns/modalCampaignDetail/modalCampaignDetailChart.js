@@ -6,7 +6,7 @@ const TreeDiagram = () => {
 
   useEffect(() => {
     const graph = new joint.dia.Graph();
-    const paper = new joint.dia.Paper({
+    new joint.dia.Paper({
       el: containerRef.current,
       model: graph,
       width: '100%',
@@ -15,8 +15,7 @@ const TreeDiagram = () => {
       drawGrid: { name: 'dot', args: { color: 'black', thickness: 1 } },
     });
 
-    const rect = (x, y, w, h, txt, fill) =>
-  new joint.shapes.standard.Rectangle({
+    const rect = (x, y, w, h, txt, fill) => new joint.shapes.standard.Rectangle({
     position: { x, y },
     size: { width: w, height: h },
     attrs: {
@@ -40,12 +39,7 @@ const TreeDiagram = () => {
         attrs: {
           line: { stroke: 'black', strokeWidth: 1 },
         },
-        connector: {
-          name: 'rounded',
-          args: {
-            radius: 5,
-          },
-        },
+        
         markup: [
           '<path class="connection" stroke="black" fill="none" d="M 0 0 0 0"/>',
         ].join(''),
