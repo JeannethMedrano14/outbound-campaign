@@ -36,7 +36,7 @@ const AdminSettingsModal = ({ isOpen, onClose }) => {
               {admins.map((admin) => (
                 <li key={admin.id}>
                   <span>{admin.name}</span>
-                  <button className="button-admin-settings-modal" onClick={() => handleDetailsClick(admin)}>
+                  <button className="button-admin-settings-modal button-admin-details" onClick={() => handleDetailsClick(admin)}>
                     Detalles
                   </button>
                   {selectedAdmin === admin && (

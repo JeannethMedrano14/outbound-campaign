@@ -144,9 +144,9 @@ const CreateTemplate = () => {
                     <p> {campaignId}</p>
                     <p> {templateTitle}</p>
                     <p> {templateContent}</p>
-                    <p> {templateType}</p>
+                    {/* {templateType && templateType !== 'Seleccione una opción' && <p>{templateType}</p>} */}
                     {selectedImage && (
-                      <img src={URL.createObjectURL(selectedImage)} alt="Selected" style={{ maxWidth: '100px', maxHeight: '100px' }} />
+                      <img src={URL.createObjectURL(selectedImage)} alt="Selected" style={{ maxWidth: '200px', maxHeight: '200px' }} />
                     )}
                   </div>
                 </div>
