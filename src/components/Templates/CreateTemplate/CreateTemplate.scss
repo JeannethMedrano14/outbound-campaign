@@ -1,11 +1,11 @@
 .ContainerPrincipal {
     background-color: #e4e1e1;
-    height: 116vh; /* response */
-    margin-top: 20px; /* response */
-    display: flex; /* response */
-    justify-content: center; /* response */
-    align-items: center; /* response */
-    position: relative; /* response */
+    height: 116vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .ContainerSecundario {
@@ -58,7 +58,7 @@
 .InputWithIcon {
     position: relative;
     display: block;
-    width: 76%; /* response */
+    width: 76%;
 }
 
 .Input {
@@ -107,26 +107,24 @@
 .smartphoneContainer {
     margin-top: 24px;
     position: relative;
-    width: 401px; /* response */
-    height: 84%; /* response */
-    display: flex; /* response */
-    justify-content: center; /* response */
-    margin-right: 13em; /* response */
+    width: 401px;
+    height: 84%;
+    display: flex;
+    justify-content: center;
+    margin-right: 13em;
 }
 
 .smartphoneContent {
     position: absolute;
-    width: 51%; /* response */
-    /* height: 69%; */
-    display: block; /* response */
-    /* flex-direction: column; */
-    justify-content: center; /* response */
-    align-items: center; /* response */
-    overflow: auto; /* response */
+    width: 51%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 .smartphone {
-    width: 67%; /* response */
-    max-height: 99%; /* response */
-    height: auto; /* response */
+    width: 67%;
+    max-height: 99%;
+    height: auto;
 }
