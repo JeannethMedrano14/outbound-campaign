@@ -1,7 +1,54 @@
 import React, { useState } from 'react';
-import './CreateTemplate.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestionCircle, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faQuestionCircle, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import './CreateTemplate.scss';
+import smartphone from '../../../assets/images/smartphone.jpg';
+
+const InputGroup = ({ label, placeholder, value, onChange, type = "text", icon, title, inputClass, showIcon = true, children }) => {
+  const renderInput = () => {
+    if (type === "select") {
+      return (
+        <select
+          id={label}
+          name={label}
+          className={`Input ${inputClass}`}
+          value={value}
+          onChange={onChange}
+        >
+          {children}
+        </select>
+      );
+    } else {
+      return (
+        <input
+          type={type}
+          id={label}
+          name={label}
+          className={`Input ${inputClass}`}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+      );
+    }
+  };
+
+  return (
+    <div className="InputGroup">
+      <label htmlFor={label} className="Label">
+        {label}
+      </label>
+      <div className="InputWithIcon">
+        {showIcon && (
+          <div className="IconoInterrogacion" title={title}>
+            <FontAwesomeIcon icon={icon} />
+          </div>
+        )}
+        {renderInput()}
+      </div>
+    </div>
+  );
+};
 
 const CreateTemplate = () => {
   const [campaignId, setCampaignId] = useState('');
@@ -9,112 +56,108 @@ const CreateTemplate = () => {
   const [templateLanguage, setTemplateLanguage] = useState('Seleccione una opción');
   const [templateType, setTemplateType] = useState('Seleccione una opción');
   const [templateContent, setTemplateContent] = useState('');
-  
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedImage(file);
+  };
+
   return (
     <div className="ContainerPrincipal">
       <div className="ContainerSecundario">
-        <div className='Header'>
-          <div className='tab'>Plantillas</div>
+        <div className="Header">
+          <h2 className="titleTemplate">Crear plantilla</h2>
         </div>
-        <div className="contentt">
-          <div className="ContenedorInput">
-            <label htmlFor="campaign-id" className="Etiqueta" >ID de la Campaña:</label>
-            <input 
-              type="text" 
-              id="campaign-id" 
-              name="campaign-id" 
-              className="Input" 
-              placeholder='Ingrese el Id del template' 
-              value={campaignId} 
-              onChange={(e) => setCampaignId(e.target.value)} 
-            />
-            <div className="IconoInterrogacion" title="Este campo es para ingresar el ID de la Campaña">
-              <FontAwesomeIcon icon={faQuestionCircle} className="IconoInterrogacion" title="Este campo es para ingresar el ID de la Campaña" />
+        <div className="Content">
+          <div className="Formulario">
+            <div className="BackButtonContainer">
+              <div className="BackButton" onClick={() => window.history.back()}>
+                <FontAwesomeIcon icon={faArrowLeft} /> Volver
+              </div>
             </div>
-          </div>
-
-          <div className="ContenedorInput">
-            <label htmlFor="template-title" className="Etiqueta">Título del Template:</label>
-            <input 
-              type="text" 
-              id="template-title" 
-              name="template-title" 
-              className="Input" 
-              placeholder='Ingrese título del template'
-              value={templateTitle} 
-              onChange={(e) => setTemplateTitle(e.target.value)} 
+            <InputGroup
+              label="ID de la Campaña:"
+              placeholder="Ingrese el Id del template"
+              value={campaignId}
+              onChange={(e) => setCampaignId(e.target.value)}
+              icon={faQuestionCircle}
+              title="Este campo es para ingresar el ID de la Campaña"
             />
-            <div className="IconoInterrogacion" title="Este campo es para ingresar el título del Template">
-              <FontAwesomeIcon icon={faQuestionCircle} className="IconoInterrogacion" title="Este campo es para ingresar el ID de la Campaña" />
-            </div>
-          </div>
-
-          <div className="ContenedorInput">
-            <label htmlFor="template-language" className="Etiqueta">Idioma:</label>
-            <select 
-              id="template-language" 
-              name="template-language" 
-              className="Select" 
-              value={templateLanguage} 
+            <InputGroup
+              label="Título del Template:"
+              placeholder="Ingrese título del template"
+              value={templateTitle}
+              onChange={(e) => setTemplateTitle(e.target.value)}
+              icon={faQuestionCircle}
+              title="Este campo es para ingresar el título del Template"
+            />
+            <InputGroup
+              label="Idioma:"
+              value={templateLanguage}
               onChange={(e) => setTemplateLanguage(e.target.value)}
+              icon={faQuestionCircle}
+              title="Este campo es para seleccionar el idioma del Template"
+              type="select"
             >
-              <option value="Seleccione una opción">Seleccione una opción</option>
+              <option value="">Seleccione una opción</option>
               <option value="spanish">Español</option>
               <option value="english">Inglés</option>
-            </select>
-            <div className="IconoInterrogacion" title="Este campo es para seleccionar el idioma del Template">
-              <FontAwesomeIcon icon={faQuestionCircle} className="IconoInterrogacion" title="Este campo es para ingresar el ID de la Campaña" />
-            </div>
-          </div>
-
-          <div className="ContenedorInput">
-            <label htmlFor="template-type" className="Etiqueta">Tipo de Template:</label>
-            <select 
-              id="template-type" 
-              name="template-type" 
-              className="Select"
-              value={templateType} 
+            </InputGroup>
+            <InputGroup
+              label="Contenido:"
+              placeholder="Ingrese el contenido"
+              value={templateContent}
+              onChange={(e) => setTemplateContent(e.target.value)}
+              inputClass="InputContent"
+              showIcon={false}
+            />
+            <InputGroup
+              label="Tipo de Template:"
+              value={templateType}
               onChange={(e) => setTemplateType(e.target.value)}
+              icon={faQuestionCircle}
+              title="Este campo es para seleccionar el tipo de Template"
+              type="select"
             >
-              <option value="Seleccione una opción">Seleccione una opción</option>
+              <option value="">Seleccione una opción</option>
               <option value="image">Imagen</option>
               <option value="text">Texto</option>
-            </select>
-            <div className="IconoInterrogacion" title="Este campo es para seleccionar el tipo de Template">
-              <FontAwesomeIcon icon={faQuestionCircle} className="IconoInterrogacion" title="Este campo es para ingresar el ID de la Campaña" />
-            </div>
+            </InputGroup>
+            {templateType === 'image' && (
+              <InputGroup
+                label="Seleccionar Imagen:"
+                type="file"
+                onChange={handleImageChange}
+                icon={faQuestionCircle}
+                title="Este campo es para seleccionar una imagen"
+              />
+            )}
           </div>
-
-          <div className="ContenedorInput">
-            <label htmlFor="template-content" className="Etiqueta">Contenido:</label>
-            <input 
-              type="text" 
-              id="template-content" 
-              name="template-content" 
-              className="InputAncho" 
-              value={templateContent} 
-              onChange={(e) => setTemplateContent(e.target.value)}
-            />
-            <div className="IconoInterrogacion" title="Este campo es para ingresar el contenido del Template">
-            </div>
-          </div>
-
-          <div className="VisualizacionCelular">
-            <h2>Visualización en Celular</h2>
-            <div className="Celular">
-              <FontAwesomeIcon icon={faMobileAlt} className="IconoCelular" />
-              <div className="PantallaCelular">
-                <div className="ContenidoCelular">
-                  <p><strong>ID de la Campaña:</strong> {campaignId}</p>
-                  <p><strong>Título del Template:</strong> {templateTitle}</p>
-                  <p><strong>Idioma:</strong> {templateLanguage}</p>
-                  <p><strong>Tipo de Template:</strong> {templateType}</p>
-                  <p><strong>Contenido:</strong> {templateContent}</p>
+          <div className="VisualizerContainer">
+            <h3 className='visualizador'>Previsualizador de imagen</h3>
+            <div className="smartphoneContainer">
+              <img src={smartphone} className="smartphone" alt="Phone" />
+              <div className="smartphoneContent">
+                <div className="PantallaCelular">
+                  <div className="ContenidoCelular">
+                    <p> {campaignId}</p>
+                    <p> {templateTitle}</p>
+                    <p> {templateContent}</p>
+                    <p> {templateType}</p>
+                    {selectedImage && (
+                      <img src={URL.createObjectURL(selectedImage)} alt="Selected" style={{ maxWidth: '100px', maxHeight: '100px' }} />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <button type="submit" className="Boton">Guardar</button>
+        </div>
+        <div>
+          <button type="submit" className="Boton">
+            Guardar
+          </button>
         </div>
       </div>
     </div>

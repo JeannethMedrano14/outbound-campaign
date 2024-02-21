@@ -6,7 +6,7 @@ import ModalCampaignDetail from "./modalCampaignDetail/modalCampaignDetail";
 function Campaigns() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState(null); // Definir el estado selectedCampaign
+  const [selectedCampaign, setSelectedCampaign] = useState(null);
 
   // Datos de ejemplo de campañas
   const campaignsData = [
@@ -29,18 +29,18 @@ function Campaigns() {
     {
       name: "Campaña 3",
       date: "2024-02-13",
-      total: 100,
-      pending: 20,
-      sent: 80,
-      failure: 5,
+      total: 208,
+      pending: 15,
+      sent: 193,
+      failure: 0,
     },
     {
       name: "Campaña 4",
       date: "2024-02-14",
-      total: 150,
-      pending: 50,
-      sent: 100,
-      failure: 10,
+      total: 180,
+      pending: 30,
+      sent: 145,
+      failure: 5,
     },
   ];
 
@@ -53,7 +53,7 @@ function Campaigns() {
   }
 
   function openDetailModal(campaign) {
-    setSelectedCampaign(campaign); // Actualizar selectedCampaign cuando se abre el modal de detalles
+    setSelectedCampaign(campaign);
     setIsDetailModalOpen(true);
   }
 
@@ -86,12 +86,10 @@ function Campaigns() {
           <thead>
             <tr>
               <th className="blue-background-campaign">Campaña</th>
-              <th className="blue-background">Fecha</th>
-              <th className="blue-background">Total</th>
-              <th className="blue-background">Pendiente</th>
-              <th className="blue-background">Envío</th>
-              <th className="blue-background">Fallo</th>
-              <th className="blue-background-details">Detalles</th>
+              <th className="blue-background-date">Fecha</th>
+              <th className="blue-background-total">Mensajes enviados</th>
+              <th className="blue-background-results">Resultados</th>
+              <th className="blue-background-actions">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -99,10 +97,12 @@ function Campaigns() {
               <tr key={index}>
                 <td>{campaign.name}</td>
                 <td>{campaign.date}</td>
-                <td>{campaign.total}</td>
-                <td>{campaign.pending}</td>
-                <td>{campaign.sent}</td>
-                <td>{campaign.failure}</td>
+                <td className="total-cell">{campaign.total}</td>
+                <td className="resultados-cell">
+                  <div>Pendientes: {campaign.pending}</div>
+                  <div>Enviados: {campaign.sent}</div>
+                  <div>Fallidos: {campaign.failure}</div>
+                </td>
                 <td>
                   <button
                     className="details-button-contacts"

@@ -4,45 +4,48 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+  align-items: center;
   position: relative;
 }
 
 .templates-container {
   border-radius: 15px;
   width: 90%;
-  max-height: 90vh; /* Limita la altura máxima del contenedor */
-  overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede el tamaño del contenedor */
+  height: 90%;
+  max-height: 90%;
   background-color: white;
-  margin-top: 20px; /* Aumenta el margen superior para separar del contenedor principal */
 }
-
 
 .header {
+  background-color: #1abcfe;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  background-color: #1ABCFE;
+  justify-content: space-between;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-
-.tab {
-  color: white;
-  padding: 10px 10px 10px 32px;
-  border-radius: 5px;
-  font-size: 27px;
+  
+  .titlePlantillas {
+    margin-left: 20px;
+    color: white;
+  }
 }
 
 .create-button {
-  background-color: white;
-  color: blue;
-  padding: 5px 24px 8px 24px;
-  border-radius: 7px;
-  cursor: pointer;
-  margin: 0px 29px 0px 0px;
-}
+    background-color: white;
+    color: #1abcfe;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .create-button:hover {
+    background-color: #4e7f93;
+    color: white;
+  }
+  
 
 .content {
   display: flex;
@@ -71,6 +74,11 @@
   margin-left: 19px;
 }
 
+.buttonFiltrar:hover {
+  background-color: #4e7f93;
+  color: white;
+}
+
 .inputbuscar {
   width: 46%;
   border: 1px solid #ccc;
@@ -82,27 +90,27 @@
 
 .table {
   width: 94%;
-  border: none;
+  border-collapse: collapse; 
   margin-left: 43px;
 }
 
 .th,
 .td {
-  border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
+
 
 .th {
   background-color: #1abdfe63;
   border-top-left-radius: 10px;
 }
 
-.th:first-child {
+.th{
   width: 50px;
 }
 
-.td:first-child {
+.td {
   text-align: center;
 }
 
@@ -168,22 +176,4 @@
 
 .containerbtn {
   margin-right: 35px;
-}
-
-.template-info-box {
-    border-radius: 7px;
-    background-color: #cccccc8c;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-left: 76px;
-}
-
-.template-info-box:hover {
-  cursor: pointer; /* Cambia el cursor al pasar sobre el cuadro */
-}
-
-.template-item2 {
-  width: 48%;
-  display: inline-block;
-  margin: 23px 4px 6px 0px;
 }

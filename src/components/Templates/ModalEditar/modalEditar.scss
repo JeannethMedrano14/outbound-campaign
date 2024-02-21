@@ -11,23 +11,33 @@
 }
 
 .modalEditar {
-    background-color: rgb(221, 221, 221);
+    background-color:white;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
     max-width: 25%;
- 
     flex-direction: column; 
-  }
+}
+
+.modal-header {
+    background-color: #1abcfe;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 21px;
+
+    .titlemodal {
+        font-size: 1.5em;
+        color: white;
+    }
+}
+
 
 .icono {
     font-size: 5em;
     display: flex;
     margin-left: 36%;
-}
-
-.titlemodal {
-    font-size: 1.5em;
 }
 
 .form-group {
@@ -41,10 +51,11 @@
 .inputcont,
 .inputnomb {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #a09f9f;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 12px;
 }
 
 .inputcont {
@@ -54,7 +65,7 @@
 
 .guardarcmabios{
     color: rgb(56, 56, 56);
-    margin-left: 5em;
+    margin-left: 10em;
 }
 
 .btnaceptaredit,
@@ -67,7 +78,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
-    margin-left: 20%;
+    margin-left: 29%;
 }
 
 .btncancelaredit {

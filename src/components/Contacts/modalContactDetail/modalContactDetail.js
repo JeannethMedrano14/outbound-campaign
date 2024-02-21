@@ -11,7 +11,7 @@ function modalContactDetail({ isOpen, onClose, contact }) {
       <div className="modal-content-detail">
         <div className='modal-header-detail'>
           <button className="close-button-detail" onClick={onClose}>&larr;</button>
-          <h2>Detalle del contacto</h2>
+          <h2 className='TitleModalContact'>Detalle del contacto</h2>
         </div>
         <div className="contact-info-container">
           {contact.avatar && (

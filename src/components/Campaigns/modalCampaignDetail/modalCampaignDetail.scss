@@ -1,27 +1,30 @@
 .modal-detail-campaign {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #e4e1e1;
-  border-radius: 10px;
-  padding: 10px;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 500px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.modal-content-detail-campaign {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  width: 90%; 
+  max-width: 500px; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header-detail-campaign {
   background-color: #1abcfe;
-  display: flex;
-  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-
-  h2 {
-    margin-left: 40px;
-    color: white;
-  }
+  padding: 10px;
 }
 
 .close-button-detail-campaign {
@@ -32,29 +35,17 @@
   cursor: pointer;
 }
 
-.modal-content-detail-campaign {
-  background-color: white;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 800px;
-  // padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content-detail-campaign > * {
-  width: 100%; /* Asegura que todos los elementos dentro del modal se ajusten correctamente */
-}
-
 .item-detail-campaign {
-  padding: 0 20px;
-  width: 100%;
-  max-width: 600px;
-  h2 {
-    color: #333;
-    padding: 0 20px;
+  padding: 20px;
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .results div {
+    margin-bottom: 5px;
   }
 }
 
@@ -71,6 +62,7 @@
   tr {
     border: 10px solid white;
   }
+
   .total {
     background-color: #1abcfe;
     color: white;
@@ -78,7 +70,7 @@
 
   .odd {
     background-color: #7bd7fc;
-    color:#3a4b5e;
+    color: #3a4b5e;
   }
 
   .even {
@@ -92,29 +84,28 @@
   }
 }
 
-.modal-campaign-table td:first-child {
+.modal-campaign-table td {
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
 }
 
-.modal-campaign-table td:last-child {
+.modal-campaign-table td{
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }
 
 .button-table-chart {
-    margin: 20px auto;
-    width: 150px;
-    border-radius: 20px;
-    background-color: #6f8eb1;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-  }
-  
-  .button-table-chart:hover {
-    background-color: #1abcfe;
-  }
-  
+  margin: 20px auto;
+  width: 150px;
+  border-radius: 20px;
+  background-color: #6f8eb1;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.button-table-chart:hover {
+  background-color: #1abcfe;
+}

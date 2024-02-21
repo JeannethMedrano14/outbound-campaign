@@ -42,7 +42,7 @@
 }
 
 .create-campaign-button:hover {
-  background-color: #1abcfe;
+  background-color: #4e7f93;
   color: white;
 }
 
@@ -95,24 +95,23 @@
 }
 
 .filter-button:hover {
-  background-color: #148f77;
+  background-color: #4e7f93;
 }
 
 .campaigns-table {
   width: 95%;
   border-collapse: collapse;
   margin: 20px auto;
+  border: none; 
   
   td {
-    border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
   }
   
-  th.blue-background {
-    background-color: #1abcfe;
-    color: white;
+  th {
     padding: 8px;
+    text-align: center;
   }
   
   tr:nth-child(even) {
@@ -122,35 +121,53 @@
   tr:hover {
     background-color: #ddd;
   }
+}
 
-  th.blue-background-campaign {
-    background-color: #1abcfe;
-    color: white;
-    border-radius: 15px 0 0 0;
-  }
+.total-cell {
+  text-align: center; 
+}
 
-  th.blue-background-details {
-    background-color: #1abcfe;
-    color: white;
-    border-radius: 0 15px 0 0;
-  }
-  
+.resultados-cell {
+  text-align: center; 
 }
 
 .details-button-contacts {
-  background-color: #6f8eb1;
+  background-color: #7fb4c9; 
   color: white;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 5px;
+  display: block; 
+  margin: 5px auto; 
+  width: 100px; 
 }
 
 .excel-button-contacts {
-  background-color: green;
+  background-color: green; 
   color: white;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
+  margin-right: 5px;
+  display: block;
+  margin: 5px auto;
+  width: 100px; 
 }
 
+.blue-background-campaign {
+  background-color: #1abcfe;
+  color: white;
+  padding: 8px;
+  border-radius: 15px 0 0 0;
+}
+
+.blue-background-date,
+.blue-background-total,
+.blue-background-results,
+.blue-background-actions {
+  background-color: #1abcfe;
+  color: white;
+  padding: 8px;
+  border-radius: 0 15px 0 0;
+}

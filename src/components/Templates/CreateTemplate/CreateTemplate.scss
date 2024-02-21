@@ -1,6 +1,6 @@
 .ContainerPrincipal {
     background-color: #e4e1e1;
-    height: 90vh;
+    height: 116vh;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -14,7 +14,6 @@
     height: 90%;
     max-height: 90%;
     background-color: white;
-    margin-top: 0px;
 }
 
 .Header {
@@ -27,87 +26,108 @@
     border-top-right-radius: 15px;
 }
 
-.tab {
+.titleTemplate {
+    margin-left: 20px;
     color: white;
-    padding: 10px 10px 10px 32px;
-    border-radius: 5px;
-    font-size: 27px;
 }
 
-.contentt {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+.Content {
+    display: flex;
+    justify-content: space-between;
 }
 
-.ContenedorInput {
-    margin: 10px 59px 9px 81px;
+.Formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.BackButtonContainer {
+    margin: 0 0 20px 54px;
+}
+
+.InputGroup {
     position: relative;
+    margin: 20px 0px 4px 78px;
+}
 
-    .Etiqueta {
-        margin-right: 10px;
-    }
+.Label {
+    margin-bottom: 5px;
+}
 
-    .Input,
-    .Select {
-        width: calc(100% - 30px);
-        height: 2.5em;
-        border: 2px solid #555;
-        border-radius: 7px;
-        background-color: #f5f5f5;
-        position: relative;
+.InputWithIcon {
+    position: relative;
+    display: block;
+    width: 59%;
+}
 
-        &::placeholder {
-            color: #777;
-        }
-    }
+.Input {
+    width: calc(100% - 30px);
+    padding-right: 30px;
+    height: 34px;
+    border-radius: 7px;
+    margin-top: 8px;
+}
 
-    .InputAncho {
-        width: calc(100% - 30px);
-        height: 8em;
-        border: 2px solid #555;
-        border-radius: 7px;
-        background-color: #f5f5f5;
-        position: relative;
-    }
+.InputContent {
+    width: 100%;
+    height: 79px;
+}
 
-    .IconoInterrogacion {
-        position: absolute;
-        right: 0px;
-        top: 62%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
+.IconoInterrogacion {
+    position: absolute;
+    top: 50%;
+    right: -37px;
+    transform: translateY(-39%);
+    cursor: pointer;
+    color: #999;
+    background-color: #ccc;
+    padding: 8px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
 
-        i {
-            color: #555;
-        }
-
-        &:hover::after {
-            content: attr(title);
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #333;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            font-size: 12px;
-        }
-    }
+.IconoInterrogacion:hover {
+    color: #555;
 }
 
 .Boton {
-    margin-top: 20px;
-    width: 29%;
-    margin-left: 40em;
+    width: 20%;
+    align-self: center;
     background-color: #1ABCFE;
     color: white;
+    border-radius: 7px;
+    padding: 9px;
+    margin-left: 47em;
+}
+
+.smartphoneContainer {
+    margin-top: 24px;
+    position: relative;
+    width: 271px;
+    height: 84%;
+    display: flex;
+    justify-content: center;
+    margin-right: 17em;
+}
+
+.smartphoneContent {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.smartphone {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.Select {
+  width: calc(100% - 40px);
 }

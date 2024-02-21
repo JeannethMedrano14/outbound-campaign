@@ -7,7 +7,9 @@ function ModalEditar({ showModal, handleCancelEdit, handleConfirmEdit }) {
   return (
     <div className="modaloverlay">
       <div className="modalEditar">
+        <div className='modal-header'>
         <h2 className='titlemodal'>Editar Template</h2>
+        </div>
         <div className="form-group">
           <label htmlFor="nombre" className='subtitle'>Nombre de la plantilla</label>
           <input type="text" id="nombre" placeholder="Ingrese el nombre de la plantilla" className='inputnomb'/>
