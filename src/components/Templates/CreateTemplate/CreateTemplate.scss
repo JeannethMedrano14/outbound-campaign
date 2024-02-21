@@ -1,3 +1,5 @@
+/* CreateTemplate.scss */
+
 .ContainerPrincipal {
     background-color: #e4e1e1;
     height: 116vh;
@@ -129,5 +131,23 @@
 }
 
 .Select {
-  width: calc(100% - 40px);
+    width: calc(100% - -5px);
+}
+
+.InputGroup select {
+    width: calc(100% - -5px);
+    padding-right: 30px;
+    height: 34px;
+    border-radius: 7px;
+    margin-top: 8px;
+}
+
+/* Estilos específicos para los iconos de interrogación dentro de los select */
+.InputGroup select .IconoInterrogacion {
+    right: -37px;
+    top: calc(50% - 10px); /* Ajustar la posición verticalmente para centrar */
+}
+
+.InputGroup select .IconoInterrogacion:hover {
+    color: #555;
 }

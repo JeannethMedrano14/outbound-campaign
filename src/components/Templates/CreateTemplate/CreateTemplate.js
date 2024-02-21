@@ -11,9 +11,10 @@ const InputGroup = ({ label, placeholder, value, onChange, type = "text", icon, 
         <select
           id={label}
           name={label}
-          className={`Input ${inputClass}`}
+          className={`Input ${inputClass}`} // Agrega la clase Input al select
           value={value}
           onChange={onChange}
+          style={{ width: "calc(100% - -5px)", borderRadius: "7px" }} // Ajusta el tamaño y el radio de borde
         >
           {children}
         </select>
@@ -99,6 +100,7 @@ const CreateTemplate = () => {
               icon={faQuestionCircle}
               title="Este campo es para seleccionar el idioma del Template"
               type="select"
+
             >
               <option value="">Seleccione una opción</option>
               <option value="spanish">Español</option>
