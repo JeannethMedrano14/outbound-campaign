@@ -1,13 +1,11 @@
-/* CreateTemplate.scss */
-
 .ContainerPrincipal {
     background-color: #e4e1e1;
-    height: 116vh;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    height: 116vh; /* response */
+    margin-top: 20px; /* response */
+    display: flex; /* response */
+    justify-content: center; /* response */
+    align-items: center; /* response */
+    position: relative; /* response */
 }
 
 .ContainerSecundario {
@@ -50,7 +48,7 @@
 
 .InputGroup {
     position: relative;
-    margin: 20px 0px 4px 78px;
+    margin: 20px 0px 4px 114px;
 }
 
 .Label {
@@ -60,20 +58,23 @@
 .InputWithIcon {
     position: relative;
     display: block;
-    width: 59%;
+    width: 76%; /* response */
 }
 
 .Input {
     width: calc(100% - 30px);
     padding-right: 30px;
-    height: 34px;
+    height: 33px;
     border-radius: 7px;
     margin-top: 8px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .InputContent {
     width: 100%;
-    height: 79px;
+    height: 100px;
+    border-radius: 7px;
 }
 
 .IconoInterrogacion {
@@ -106,48 +107,26 @@
 .smartphoneContainer {
     margin-top: 24px;
     position: relative;
-    width: 271px;
-    height: 84%;
-    display: flex;
-    justify-content: center;
-    margin-right: 17em;
+    width: 401px; /* response */
+    height: 84%; /* response */
+    display: flex; /* response */
+    justify-content: center; /* response */
+    margin-right: 13em; /* response */
 }
 
 .smartphoneContent {
     position: absolute;
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
+    width: 51%; /* response */
+    /* height: 69%; */
+    display: block; /* response */
+    /* flex-direction: column; */
+    justify-content: center; /* response */
+    align-items: center; /* response */
+    overflow: auto; /* response */
 }
 
 .smartphone {
-    width: 100%;
-    max-height: 100%;
-    height: auto;
-}
-
-.Select {
-    width: calc(100% - -5px);
-}
-
-.InputGroup select {
-    width: calc(100% - -5px);
-    padding-right: 30px;
-    height: 34px;
-    border-radius: 7px;
-    margin-top: 8px;
-}
-
-/* Estilos específicos para los iconos de interrogación dentro de los select */
-.InputGroup select .IconoInterrogacion {
-    right: -37px;
-    top: calc(50% - 10px); /* Ajustar la posición verticalmente para centrar */
-}
-
-.InputGroup select .IconoInterrogacion:hover {
-    color: #555;
+    width: 67%; /* response */
+    max-height: 99%; /* response */
+    height: auto; /* response */
 }

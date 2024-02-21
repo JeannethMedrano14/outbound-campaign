@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestionCircle, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import './CreateTemplate.scss';
-import smartphone from '../../../assets/images/smartphone.jpg';
+import smartphone from '../../../assets/images/smartphone.jpg.png';
 
 const InputGroup = ({ label, placeholder, value, onChange, type = "text", icon, title, inputClass, showIcon = true, children }) => {
   const renderInput = () => {
@@ -11,10 +11,10 @@ const InputGroup = ({ label, placeholder, value, onChange, type = "text", icon, 
         <select
           id={label}
           name={label}
-          className={`Input ${inputClass}`} // Agrega la clase Input al select
+          className={`Input ${inputClass}`} 
           value={value}
           onChange={onChange}
-          style={{ width: "calc(100% - -5px)", borderRadius: "7px" }} // Ajusta el tamaño y el radio de borde
+          style={{ width: "calc(100% - -5px)", borderTopRightRadius: "0", height: "37px", borderBottomRightRadius: "0" }}
         >
           {children}
         </select>
@@ -143,8 +143,8 @@ const CreateTemplate = () => {
               <div className="smartphoneContent">
                 <div className="PantallaCelular">
                   <div className="ContenidoCelular">
-                    <p> {campaignId}</p>
-                    <p> {templateTitle}</p>
+                    <h2 className='visualizador'>{templateTitle}</h2>
+                    <h4> {campaignId}</h4>
                     <p> {templateContent}</p>
                     {/* {templateType && templateType !== 'Seleccione una opción' && <p>{templateType}</p>} */}
                     {selectedImage && (
