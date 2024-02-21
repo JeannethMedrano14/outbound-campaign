@@ -53,7 +53,7 @@ function Campaigns() {
   }
 
   function openDetailModal(campaign) {
-    setSelectedCampaign(campaign); // Actualizar selectedCampaign cuando se abre el modal de detalles
+    setSelectedCampaign(campaign);
     setIsDetailModalOpen(true);
   }
 
